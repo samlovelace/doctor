@@ -1,0 +1,12 @@
+include:
+  - "**/*.hpp"
+  - "**/*.h"
+
+# TODO: support this
+#exclude:
+#  - "**/test/**"
+#  - "**/third_party/**"
+
+output:
+  dir: "docs/uml"
+  location: there # "here" outputs docs to the directory where doctor was run; "there" outputs docs to the target repo directory
