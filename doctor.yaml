@@ -1,14 +1,21 @@
 repo_type: ros_ws
 
 include:
-  - "**/*.hpp"
-  - "**/*.h"
+  - "*.hpp"
+  - "*.h"
 
-# TODO: support this
-#exclude:
-#  - "**/test/**"
-#  - "**/third_party/**"
+exclude: []
 
 output:
   dir: "docs/uml"
-  location: here # "here" outputs docs to the directory where doctor was run; "there" outputs docs to the target repo directory
+  location: here # "here" = where doctor is run; "there" = inside target repo
+
+ros:
+  publishers:
+    - "createPublisher"
+  subscribers:
+    - "createSubscriber"
+  services:
+    - "create_service"
+  clients:
+    - "create_client"
